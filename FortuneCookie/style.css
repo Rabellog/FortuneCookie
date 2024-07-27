@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --color-base-white:#fff;
+    --color-base-burntyellow:#FF9500;
+    --color-base-black: #000;
+    --color-base-gray: #E4EDF1;
+    --color-base-darkblue:#34355B;
+    --color-base-background:linear-gradient(45deg, #190361 0%, #B0F 100%);
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background: var(--color-base-background);
+    background-repeat: no-repeat;
+}
+
+#frame01.hide {
+    display: none;
+}
+
+#frame02.hide {
+    display: none;
+}
+
+#frame01{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 43rem;
+    height: 43rem;
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0rem 2rem 5rem 0rem rgba(0, 0, 0, 0.80);
+    margin-top: -12rem;
+}
+
+h1{
+    width: 26rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+}
+
+p{
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: "DM Sans";
+    margin-bottom: 2rem;
+}
+
+h1,p{
+    color: var(--color-base-darkblue);
+}
+
+.fortune-cookie{
+    width: 25rem;
+    height: 19rem;
+    animation: animationRotate;
+    animation-duration: 300ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+.fortune-cookie:hover{
+    cursor: pointer;
+    animation-play-state: running;
+}
+
+@keyframes animationRotate {
+    0% {
+      transform: rotate(-3deg); 
+    }
+    100% {
+      transform: rotate(3deg);
+    }
+}
+
+/*Segunda tela*/
+
+#frame02{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 43rem;
+    height: 58rem;
+    padding: 4.8rem 6.4rem 6.4rem 4.8rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0rem 2rem 5rem 0rem rgba(0, 0, 0, 0.80);
+    margin-top: -12rem;
+    gap: 1.7rem;
+}
+
+.note{
+    width: 30rem;
+    height: 11rem;
+    padding: 1rem;
+    gap: 1rem;
+    background:var(--color-base-gray);
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+}
+
+.note p{
+    font-size: 2.4rem;
+    font-family: "Dancing Script", cursive;
+    font-weight: 400;
+    color: var(--color-base-black);
+    text-align: center;
+}
+
+button{
+    border-style: none;
+    color: var(--color-base-white);
+    background-color: #FF9500;
+    padding: 1.6rem;
+    font-family: "DM Sans";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 0.4rem;
+}
+
+button:hover{
+    cursor: pointer;
+    filter:contrast(1.2)
+}
